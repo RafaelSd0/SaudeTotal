@@ -1,6 +1,12 @@
 import  Link  from "next/link";
+import { getServerSession } from "next-auth";
+import LogOutBtn from "./LogOutBtn";
+import LoginBtn from "./LoginBtn";
 
-const Header = () => {
+export default async function Header() {
+
+  const session = await getServerSession()
+
   return (
     <header className="flex items-center justify-between px-5 py-3">
       <p>logo</p>
@@ -14,12 +20,8 @@ const Header = () => {
         <Link href={"/"}>
         <span> Contato </span>
         </Link>
-        <div>
-          <span>login</span>
-        </div>
+        {!session ? <LoginBtn/> : <LogOutBtn/>}
       </div>
     </header>
   );
 };
-
-export default Header;
