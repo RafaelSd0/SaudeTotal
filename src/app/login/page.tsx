@@ -2,25 +2,30 @@
 
 import { signIn } from "next-auth/react";
 import LoginGBtn from "@/components/LoginGoogleBtn";
+import { useSearchParams } from "next/navigation";
 
 export default function LoginForm() {
 
-    async function loginForm(e: React.FormEvent<HTMLFormElement>) {
-      e.preventDefault()
+  const searchParams = useSearchParams()
 
-      const formdata = new FormData(e.currentTarget)
-      console.log(formdata.get('email'))
+  const erro = searchParams.get('error')
 
-      const data = {
-        email: formdata.get('email'),
-        password: formdata.get('password')
-      }
+  async function loginForm(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
 
-      signIn('credentials', {
-        ...data,
-        callbackUrl: '/test'
-      })
+    const formdata = new FormData(e.currentTarget)
+    console.log(formdata.get('email'))
+
+    const data = {
+      email: formdata.get('email'),
+      password: formdata.get('password')
     }
+
+    signIn('credentials', {
+      ...data,
+      callbackUrl: '/test'
+    })
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
@@ -53,6 +58,9 @@ export default function LoginForm() {
           </button>
         </form>
         <LoginGBtn/>
+        { erro === 'CredentialsSignin' && 
+          <span>Erro no login</span>
+        }
       </div>
     </div>
   );
