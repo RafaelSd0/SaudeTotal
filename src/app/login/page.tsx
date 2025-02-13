@@ -1,6 +1,5 @@
 'use client'
 
-import { FormEvent, FormHTMLAttributes } from "react";
 import { signIn } from "next-auth/react";
 import LoginGBtn from "@/components/LoginGoogleBtn";
 

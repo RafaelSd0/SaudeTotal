@@ -2,9 +2,9 @@ import  Link  from "next/link";
 
 const Header = () => {
   return (
-    <header>
+    <header className="flex items-center justify-between px-5 py-3">
       <p>logo</p>
-      <div>
+      <div className="flex items-center gap-5">
         <Link href={"/"}>
         <span> Agendar </span>
         </Link>
@@ -16,7 +16,6 @@ const Header = () => {
         </Link>
         <div>
           <span>login</span>
-          <span>Cadastro</span>
         </div>
       </div>
     </header>
