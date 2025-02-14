@@ -3,6 +3,7 @@
 import { signIn } from "next-auth/react";
 import LoginGBtn from "@/components/LoginGoogleBtn";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 export default function LoginForm() {
 
@@ -28,9 +29,12 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className=" p-8 rounded-2xl shadow-lg w-96 border border-gray-700">
-        <h2 className="text-2xl font-bold text-center mb-6 ">Login</h2>
+    <div className="flex items-center justify-center min-h-screen bg-slate-50">
+      <div className=" p-8 rounded-2xl shadow-lg w-96 border border-gray-700 bg-slate-50/45">
+        <div className="flex items-center justify-center gap-3">
+          <h2 className="text-2xl font-bold ">Login</h2> 
+          <Image  src={"/Logo Saude Total.svg"} alt="logo" width={75} height={75} />
+        </div>
         <form onSubmit={loginForm}>
           <div className="mb-4">
             <label className="block " htmlFor="email">Email</label>

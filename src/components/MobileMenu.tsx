@@ -27,22 +27,22 @@ export default async function MobileMenu() {
       <div className="absolute top-14 right-0 w-48 bg-slate-50 shadow-lg rounded-md p-2 hidden peer-checked:block text-center">
         <ul className="space-y-4">
           <li className="link-mobile">
-            <Link href={"/home"} >
+            <Link href={"/"} >
               <span> Inicio </span>
             </Link>
           </li>
           <li className="link-mobile">
-            <Link href={"/home"} >
+            <Link href={"/"} >
               <span> Agendar </span>
             </Link>
           </li>
           <li className="link-mobile">
-            <Link href={"/home"} >
+            <Link href={"/"} >
               <span> Sobre </span>
             </Link>
           </li>
           <li className="link-mobile">
-            <Link href={"/home"} >
+            <Link href={"/"} >
               <span> Suporte </span>
             </Link>
           </li>

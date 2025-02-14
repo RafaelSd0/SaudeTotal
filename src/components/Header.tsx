@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import LogOutBtn from "./LogOutBtn";
 import LoginBtn from "./LoginBtn";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 
 
 export default async function Header() {
@@ -11,9 +12,11 @@ export default async function Header() {
 
   return (
     <header className="flex items-center justify-between md:px-14 border-b shadow-md shadow-gray-300 border-b-gray-700 fixed top-0 left-0 z-50 h-16 w-full bg-slate-50 ">
-      <p className="pl-3 md:pl-0">logo</p>
+      <Link href={"/"}>
+        <Image src={"/Logo Saude Total.svg"} alt="logo" width={75} height={75} />
+      </Link>
       <div className="md:flex items-center gap-6 hidden">
-        <Link href={"/home"} className="link">
+        <Link href={"/"} className="link">
         <span> Inicio </span>
         </Link>
         <Link href={"/"} className="link">
