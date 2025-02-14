@@ -11,7 +11,7 @@ export default async function Header() {
   const session = await getServerSession()
 
   return (
-    <header className="flex items-center justify-between md:px-14 border-b shadow-md shadow-gray-300 border-b-gray-700 fixed top-0 left-0 z-50 h-16 w-full bg-slate-50 ">
+    <header className="flex items-center justify-between md:px-14 border-b shadow-lg shadow-gray-700 border-b-gray-700 fixed top-0 left-0 z-50 h-16 w-full bg-slate-50 ">
       <Link href={"/"}>
         <Image src={"/Logo Saude Total.svg"} alt="logo" width={75} height={75} />
       </Link>
