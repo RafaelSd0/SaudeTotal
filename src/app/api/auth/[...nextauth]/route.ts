@@ -36,9 +36,6 @@ const handler = NextAuth({
       }
     })
   ],
-  pages: {
-    signIn: "/login", // Página de login personalizada
-  }
 })
 
 export { handler as GET, handler as POST }
