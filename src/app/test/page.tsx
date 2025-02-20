@@ -8,7 +8,7 @@ export default async function page() {
     
   return (
     <div>
-      <h1>page</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga saepe perspiciatis debitis. Impedit deserunt fugiat quas praesentium expedita rem modi ipsum cumque id? Assumenda quasi maxime corporis fuga odio consequatur.</p>
     </div>
   );
 }
